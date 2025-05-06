@@ -23,6 +23,7 @@ const onSelectedEpisodeHandler = (data)=>{
         :series="episode.series"
         :season="episode.season"
         :episode="episode.episode"
+        :bgColor="episode.bgColor"
         @onSelectedEpisode="onSelectedEpisodeHandler"
       />             
     </main>

@@ -7,7 +7,8 @@ const props = defineProps({
     },
     series:String,
     season:Number,
-    episode:Number
+    episode:Number,
+    bgColor:String
 })
 const emits = defineEmits(["onSelectedEpisode"])
 const displayEpisodeNotation = computed(()=>{
@@ -26,14 +27,14 @@ const continueEpisode = ()=>{
 
 <template>
     <div class="watch-card">
-        <div class="course-preview">
-            <h6>Season {{season}}</h6>
+        <div class="course-preview" :style="{backgroundColor:bgColor}">
+            <h6>Season {{season}} </h6>
             <h2>{{series}}</h2>
         </div>
         <div class="course-info">
             <h6>ep: {{displaySeasonNotation}}{{displayEpisodeNotation}}</h6>
             <h2>{{title}}</h2>
-            <button class="btn" @click="continueEpisode">Continue</button>
+            <button :style="{backgroundColor:bgColor}" class="btn" @click="continueEpisode">Continue</button>
         </div>
     </div>
 </template>

@@ -15,7 +15,8 @@ const props = defineProps({
             <li>Un lien de nav 1</li>
             <li>Un lien de nav 2</li>
         </ul>
-        <span>▶ {{ episodeTitle }}</span>
+        <span v-if="episodeTitle!=''">▶ {{ episodeTitle }}</span>
+       
     </section>
 </template>
 
